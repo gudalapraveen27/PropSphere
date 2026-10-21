@@ -1,0 +1,339 @@
+
+/* ===== PropSphere Add Property Page ===== */
+
+.add-property-page {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    color: #263449;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===== Page heading ===== */
+
+.add-property-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.add-property-eyebrow {
+    color: #0F9D8A;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.add-property-heading h2 {
+    margin: 9px 0 8px;
+    color: #142B4A;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.add-property-heading p {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.add-property-badge {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    border: 1px solid #BCE9E2;
+    border-radius: 9px;
+    background: #E9F8F5;
+    color: #087F70;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ===== Main form card ===== */
+
+.property-form {
+    overflow: hidden;
+    border: 1px solid #E3EAF1;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 30px rgba(20, 43, 74, 0.045);
+}
+
+.property-form-section {
+    padding: 30px;
+    border-bottom: 1px solid #E9EEF4;
+}
+
+.property-section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.property-section-number {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #E8F7F4;
+    color: #0F8C7C;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.property-section-heading h3 {
+    margin: 1px 0 6px;
+    color: #142B4A;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.property-section-heading p {
+    margin: 0;
+    color: #7B8798;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ===== Form grid ===== */
+
+.property-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+}
+
+.property-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 9px;
+}
+
+.property-field-full {
+    grid-column: 1 / -1;
+}
+
+.property-field label {
+    color: #24364B;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.property-field input,
+.property-field select,
+.property-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid #D8E1EA;
+    border-radius: 8px;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #263449;
+    font-family: inherit;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.property-field input::placeholder,
+.property-field textarea::placeholder {
+    color: #A0ACBA;
+}
+
+.property-field select {
+    cursor: pointer;
+}
+
+.property-field textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.65;
+}
+
+.property-field input:focus,
+.property-field select:focus,
+.property-field textarea:focus {
+    border-color: #0F9D8A;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(15, 157, 138, 0.12);
+}
+
+.property-field small {
+    color: #7B8798;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ===== Image upload ===== */
+
+.property-field .property-file-input {
+    min-height: auto;
+    padding: 14px;
+    border: 1px dashed #A9B9CA;
+    background-color: #F8FAFC;
+    cursor: pointer;
+}
+
+.property-file-input::file-selector-button {
+    margin-right: 12px;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #E3F4F1;
+    color: #087F70;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+/* ===== Form feedback ===== */
+
+.property-form-message {
+    margin: 22px 30px 0;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.property-form-message.success {
+    border: 1px solid #A7E2D2;
+    background: #EAF8F3;
+    color: #176B55;
+}
+
+.property-form-message.error {
+    border: 1px solid #F2C6C6;
+    background: #FFF1F1;
+    color: #A12D2D;
+}
+
+/* ===== Submit section ===== */
+
+.property-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px 30px;
+    background: #FAFBFD;
+}
+
+.property-form-actions p {
+    margin: 0;
+    color: #7B8798;
+    font-size: 12px;
+}
+
+.property-submit-button {
+    min-height: 46px;
+    padding: 12px 23px;
+    border: 1px solid #0F9D8A;
+    border-radius: 8px;
+    background: #0F9D8A;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.property-submit-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: #0B8173;
+    box-shadow: 0 5px 14px rgba(15, 157, 138, 0.2);
+}
+
+.property-submit-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.property-submit-button:focus-visible {
+    outline: 3px solid #D9A441;
+    outline-offset: 3px;
+}
+
+/* ===== Responsive design ===== */
+
+@media (max-width: 700px) {
+    .add-property-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .add-property-heading h2 {
+        font-size: 25px;
+    }
+
+    .property-form-section {
+        padding: 23px 20px;
+    }
+
+    .property-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 19px;
+    }
+
+    .property-field-full {
+        grid-column: auto;
+    }
+
+    .property-form-actions {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 22px 20px;
+    }
+
+    .property-submit-button {
+        width: 100%;
+    }
+
+    .property-form-message {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .add-property-heading h2 {
+        font-size: 23px;
+    }
+
+    .property-form-section {
+        padding: 20px 15px;
+    }
+
+    .property-section-heading {
+        gap: 10px;
+    }
+
+    .property-section-number {
+        width: 36px;
+        height: 36px;
+    }
+
+    .property-section-heading h3 {
+        font-size: 16px;
+    }
+
+    .property-field input,
+    .property-field select,
+    .property-field textarea {
+        font-size: 13px;
+    }
+}

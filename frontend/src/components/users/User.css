@@ -1,0 +1,454 @@
+
+/* ================================
+   PropSphere Theme
+================================ */
+
+:root {
+    --ps-navy: #142b4a;
+    --ps-navy-light: #1c3a60;
+    --ps-teal: #0f9d8a;
+    --ps-teal-dark: #0b8273;
+    --ps-background: #f5f7fa;
+    --ps-white: #ffffff;
+    --ps-text: #25364b;
+    --ps-muted: #8290a3;
+    --ps-border: #e7ecf2;
+    --ps-gold: #d9a441;
+    --ps-sidebar-width: 260px;
+}
+
+/* ================================
+   Global Layout
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+.propsphere-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--ps-background);
+    color: var(--ps-text);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ================================
+   Sidebar
+================================ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: var(--ps-sidebar-width);
+    height: 100vh;
+    padding: 28px 18px 20px;
+    overflow-y: auto;
+    background: var(--ps-navy);
+    color: var(--ps-white);
+    box-shadow: 4px 0 20px rgba(20, 43, 74, 0.06);
+}
+
+/* Brand */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    background: var(--ps-teal);
+    color: var(--ps-white);
+    font-size: 27px;
+    font-weight: 800;
+    box-shadow: 0 5px 14px rgba(15, 157, 138, 0.25);
+}
+
+.brand-text h2 {
+    margin: 0;
+    color: var(--ps-white);
+    font-size: 21px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.brand-text span {
+    display: block;
+    margin-top: 4px;
+    color: #aabbd0;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+/* Section headings */
+
+.sidebar-section-title {
+    margin: 27px 10px 12px;
+    color: #91a6c0;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.seller-menu-title {
+    margin-top: 29px;
+}
+
+.account-menu-title {
+    margin-top: 29px;
+}
+
+/* Navigation */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 46px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #c2cede;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--ps-white);
+    transform: translateX(2px);
+}
+
+.sidebar-link.active {
+    background: var(--ps-teal);
+    color: var(--ps-white);
+    font-weight: 650;
+    box-shadow: 0 5px 14px rgba(15, 157, 138, 0.16);
+}
+
+.nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    flex-shrink: 0;
+    font-size: 21px;
+    line-height: 1;
+}
+
+/* ================================
+   Logout
+================================ */
+
+.sidebar-logout {
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.navbar-logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-height: 45px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    background: transparent;
+    color: #d1dbea;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.navbar-logout-button:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--ps-white);
+}
+
+.logout-icon {
+    font-size: 19px;
+}
+
+/* Sidebar footer */
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+    padding: 18px 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #91a6c0;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.footer-indicator {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--ps-gold);
+}
+
+/* ================================
+   Main Content
+================================ */
+
+.propsphere-main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: var(--ps-sidebar-width);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 116px;
+    padding: 26px 38px;
+    border-bottom: 1px solid var(--ps-border);
+    background: var(--ps-white);
+}
+
+.main-header h1 {
+    margin: 0;
+    color: var(--ps-navy);
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+}
+
+.main-header p {
+    margin: 8px 0 0;
+    color: var(--ps-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 13px;
+    border: 1px solid #dcefe9;
+    border-radius: 30px;
+    background: #f2faf7;
+    color: #367d6c;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.header-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ps-teal);
+}
+
+/* Outlet content */
+
+.page-content {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 30px 38px 40px;
+}
+
+/* ================================
+   Responsive Layout
+================================ */
+
+@media (min-width: 1500px) {
+    .page-content {
+        padding: 36px 48px 48px;
+    }
+
+    .main-header {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --ps-sidebar-width: 230px;
+    }
+
+    .sidebar {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .main-header {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .page-content {
+        padding: 25px;
+    }
+
+    .header-badge {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    :root {
+        --ps-sidebar-width: 0px;
+    }
+
+    .propsphere-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        padding: 15px;
+        overflow: visible;
+    }
+
+    .sidebar-brand {
+        padding: 0 4px 15px;
+    }
+
+    .brand-logo {
+        width: 39px;
+        height: 39px;
+        font-size: 24px;
+    }
+
+    .brand-text h2 {
+        font-size: 19px;
+    }
+
+    .sidebar-section-title {
+        margin: 17px 7px 9px;
+    }
+
+    .seller-menu-title,
+    .account-menu-title {
+        margin-top: 18px;
+    }
+
+    .sidebar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .sidebar-link {
+        gap: 8px;
+        min-height: 42px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        width: 18px;
+        font-size: 18px;
+    }
+
+    .sidebar-logout {
+        margin-top: 16px;
+        padding-top: 0;
+    }
+
+    .navbar-logout-button {
+        justify-content: center;
+        min-height: 40px;
+    }
+
+    .sidebar-footer {
+        margin-top: 13px;
+        padding-top: 12px;
+    }
+
+    .propsphere-main {
+        min-height: auto;
+        margin-left: 0;
+    }
+
+    .main-header {
+        min-height: auto;
+        padding: 23px 20px;
+    }
+
+    .main-header h1 {
+        font-size: 22px;
+    }
+
+    .main-header p {
+        font-size: 12px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sidebar {
+        padding: 12px;
+    }
+
+    .sidebar-link {
+        gap: 6px;
+        padding: 9px 7px;
+        font-size: 11px;
+    }
+
+    .main-header {
+        padding: 20px 15px;
+    }
+
+    .main-header h1 {
+        font-size: 20px;
+    }
+
+    .page-content {
+        padding: 15px 12px;
+    }
+}

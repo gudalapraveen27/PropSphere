@@ -1,0 +1,256 @@
+
+/* ===== PropSphere Login Page ===== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(15, 157, 138, 0.10),
+            transparent 35%
+        ),
+        #F5F7FA;
+
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===== Login Card ===== */
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5EBF2;
+    border-radius: 18px;
+    box-shadow: 0 16px 50px rgba(20, 43, 74, 0.09);
+}
+
+/* ===== Branding ===== */
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-bottom: 36px;
+
+    color: #142B4A;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.login-brand-logo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background: #0F9D8A;
+    color: #FFFFFF;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* ===== Heading ===== */
+
+.login-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.login-eyebrow {
+    color: #0F9D8A;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.login-heading h1 {
+    margin: 12px 0 10px;
+    color: #142B4A;
+
+    font-size: 27px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+    line-height: 1.3;
+}
+
+.login-heading p {
+    margin: 0;
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ===== Form ===== */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.login-field label {
+    color: #24364B;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.login-field input {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 14px;
+
+    border: 1px solid #D8E1EA;
+    border-radius: 8px;
+    outline: none;
+
+    background: #FFFFFF;
+    color: #263449;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-field input::placeholder {
+    color: #A0ACBA;
+}
+
+.login-field input:focus {
+    border-color: #0F9D8A;
+    box-shadow: 0 0 0 3px rgba(15, 157, 138, 0.12);
+}
+
+/* ===== Error Message ===== */
+
+.login-error {
+    padding: 12px 14px;
+    border: 1px solid #F2C6C6;
+    border-radius: 8px;
+
+    background: #FFF1F1;
+    color: #A12D2D;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ===== Submit Button ===== */
+
+.login-submit-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 2px;
+    padding: 13px 18px;
+
+    border: 1px solid #0F9D8A;
+    border-radius: 8px;
+
+    background: #0F9D8A;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-submit-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: #0B8173;
+    box-shadow: 0 5px 15px rgba(15, 157, 138, 0.2);
+}
+
+.login-submit-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.login-submit-button:focus-visible,
+.login-register-prompt a:focus-visible {
+    outline: 3px solid #D9A441;
+    outline-offset: 3px;
+}
+
+/* ===== Register Link ===== */
+
+.login-register-prompt {
+    margin-top: 25px;
+    color: #718096;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.login-register-prompt a {
+    color: #0F8C7C;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-register-prompt a:hover {
+    color: #0B6D62;
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+
+.login-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+
+    border-top: 1px solid #EDF0F5;
+
+    color: #8A97A8;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 20px 14px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .login-brand {
+        margin-bottom: 28px;
+        font-size: 21px;
+    }
+
+    .login-heading h1 {
+        font-size: 24px;
+    }
+}
