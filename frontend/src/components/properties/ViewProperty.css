@@ -1,0 +1,340 @@
+
+/* ================================
+   View Property Page
+================================ */
+
+.view-property-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #25364b;
+}
+
+/* Back Button */
+
+.view-property-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 7px 0;
+    border: none;
+    background: transparent;
+    color: #0f9d8a;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.view-property-back:hover {
+    color: #0b8273;
+}
+
+/* Main Property Card */
+
+.view-property-card {
+    overflow: hidden;
+    border: 1px solid #e7ecf2;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 6px 22px rgba(20, 43, 74, 0.045);
+}
+
+/* Property Image */
+
+.view-property-image,
+.view-property-placeholder {
+    display: flex;
+    width: 100%;
+    height: 310px;
+}
+
+.view-property-image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.view-property-placeholder {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f4f2, #eef2f7);
+    color: #0f9d8a;
+}
+
+.view-property-placeholder span {
+    font-size: 55px;
+}
+
+.view-property-placeholder p {
+    margin: 8px 0 0;
+    color: #8290a3;
+    font-size: 12px;
+}
+
+/* Main Content */
+
+.view-property-content {
+    padding: 24px 26px;
+}
+
+/* Badges */
+
+.view-property-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.view-property-badges span {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eaf8f4;
+    color: #0b8273;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Title and Location */
+
+.view-property-content h1 {
+    margin: 0;
+    color: #142b4a;
+    font-size: 26px;
+    font-weight: 750;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.view-property-location {
+    margin: 8px 0 10px;
+    color: #8290a3;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Price */
+
+.view-property-price {
+    margin: 15px 0;
+    color: #0f9d8a;
+    font-size: 23px;
+    font-weight: 750;
+}
+
+/* Property Features */
+
+.view-property-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+    padding: 15px 0;
+    border-top: 1px solid #e7ecf2;
+    border-bottom: 1px solid #e7ecf2;
+}
+
+.view-property-features div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.view-property-features strong {
+    color: #142b4a;
+    font-size: 17px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.view-property-features span {
+    color: #8290a3;
+    font-size: 11px;
+}
+
+/* Sections */
+
+.view-property-section {
+    margin-top: 22px;
+}
+
+.view-property-section h3 {
+    margin: 0 0 10px;
+    color: #142b4a;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.view-property-section > p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.8;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* Details Grid */
+
+.view-property-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.view-property-details-grid p {
+    min-width: 0;
+    margin: 0;
+    padding: 11px 12px;
+    border: 1px solid #edf0f5;
+    border-radius: 8px;
+    background: #f7f9fc;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.view-property-details-grid strong {
+    color: #142b4a;
+}
+
+/* Amenities */
+
+.view-property-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.view-property-amenities span {
+    padding: 7px 11px;
+    border: 1px solid #dcefe9;
+    border-radius: 20px;
+    background: #f2faf7;
+    color: #367d6c;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Seller Details */
+
+.view-property-section:has(.view-property-details-grid) {
+    min-width: 0;
+}
+
+/* Loading, Error and Empty States */
+
+.view-property-status {
+    padding: 35px 16px;
+    text-align: center;
+}
+
+.view-property-status h2 {
+    margin: 0 0 8px;
+    color: #142b4a;
+    font-size: 21px;
+}
+
+.view-property-status p {
+    margin: 8px 0;
+    color: #8290a3;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.view-property-status button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #0f9d8a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.view-property-status button:hover {
+    background: #0b8273;
+}
+
+.view-property-error h2 {
+    color: #b42318;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 700px) {
+    .view-property-image,
+    .view-property-placeholder {
+        height: 240px;
+    }
+
+    .view-property-content {
+        padding: 19px;
+    }
+
+    .view-property-content h1 {
+        font-size: 23px;
+    }
+
+    .view-property-price {
+        font-size: 21px;
+    }
+
+    .view-property-features {
+        gap: 8px;
+        margin: 15px 0;
+        padding: 13px 0;
+    }
+
+    .view-property-features strong {
+        font-size: 15px;
+    }
+
+    .view-property-section {
+        margin-top: 19px;
+    }
+}
+
+@media (max-width: 450px) {
+    .view-property-image,
+    .view-property-placeholder {
+        height: 200px;
+    }
+
+    .view-property-content {
+        padding: 15px;
+    }
+
+    .view-property-content h1 {
+        font-size: 21px;
+    }
+
+    .view-property-location {
+        font-size: 11px;
+    }
+
+    .view-property-details-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .view-property-features span {
+        font-size: 10px;
+    }
+
+    .view-property-back {
+        margin-bottom: 8px;
+    }
+}

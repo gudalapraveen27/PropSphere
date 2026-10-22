@@ -25,7 +25,10 @@ export const propertyApi = createApi({
         }),
 
         getPropertyById: builder.query({
-            query: (id) => `/${id}`,
+            query: (id) => ({
+                url: `/${id}`,
+                method: 'GET',
+            })
         }),
 
         createProperty: builder.mutation({
@@ -35,12 +38,20 @@ export const propertyApi = createApi({
                 body: property,
             }),
         }),
+
+        getMyProperties: builder.query({
+            query: (listedBy)=>({
+                url:`/myproperties/${listedBy}`,
+                method:"GET"
+            })
+        })
     }),
 })
 
 export const {
     useGetPropertiesQuery,
     useGetPropertyByIdQuery,
+    useGetMyPropertiesQuery,
     useCreatePropertyMutation,
     useLazyGetPropertiesQuery,
 } = propertyApi

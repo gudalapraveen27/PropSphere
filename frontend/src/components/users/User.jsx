@@ -66,11 +66,11 @@ function User() {
                     </NavLink>
 
                     <NavLink
-                        to="/home/favorites"
+                        to="/home/favourites"
                         className={getLinkClass}
                     >
                         <span className="nav-icon">♡</span>
-                        <span>Favorites</span>
+                        <span>Favourites</span>
                     </NavLink>
 
                     <NavLink

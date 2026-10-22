@@ -1,0 +1,92 @@
+
+.my-properties-container {
+  padding: 25px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.my-properties-title {
+  color: #142b4a;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.my-property-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.my-property-name {
+  color: #142b4a;
+  margin: 0 0 15px;
+  font-size: 20px;
+}
+
+.my-property-card p {
+  color: #555;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.my-property-card strong {
+  color: #333;
+}
+
+.my-property-status {
+  display: inline-block;
+  background-color: #e0f5f1;
+  color: #0f806f;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.my-property-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.my-property-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 9px 18px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-btn {
+  background-color: #142b4a;
+}
+
+.update-btn {
+  background-color: #0f9d8a;
+}
+
+.my-property-btn:hover {
+  opacity: 0.85;
+}
+
+.my-properties-message {
+  padding: 20px;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .my-properties-container {
+    padding: 15px;
+  }
+
+  .my-property-card {
+    padding: 15px;
+  }
+
+  .my-property-actions {
+    flex-wrap: wrap;
+  }
+}

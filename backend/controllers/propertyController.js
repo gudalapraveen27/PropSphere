@@ -32,6 +32,18 @@ const getPropertyById = async (req, res) => {
   }
 };
 
+const getMyProperties = async (req, res) => {
+  try {
+    const property = await Property.find({ listedBy: req.params.listedBy });
+    if (!property) {
+      return res.status(404).send({ msg: "Properties not found" });
+    }
+    res.status(200).send(property);
+  } catch (error) {
+    res.send(400).send({ message: error.message })
+  }
+}
+
 const updateProperty = async (req, res) => {
   try {
     const property = await Property.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -70,6 +82,7 @@ module.exports = {
   createProperty,
   getAllProperties,
   getPropertyById,
+  getMyProperties,
   updateProperty,
   deleteProperty,
   filterProperties

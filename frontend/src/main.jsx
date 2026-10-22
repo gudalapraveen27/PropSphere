@@ -9,6 +9,8 @@ import Property from './components/properties/Property.jsx'
 import User from './components/users/User.jsx'
 import AddProperty from './components/users/AddProperty.jsx'
 import Profile from './components/profile/Profile.jsx'
+import ViewProperty from './components/properties/ViewProperty.jsx'
+import MyProperties from './components/properties/MyProperties.jsx'
 
 const router = createBrowserRouter([
     {
@@ -40,6 +42,18 @@ const router = createBrowserRouter([
             {
                 path: "/home/addproperty",
                 element: <AddProperty></AddProperty>
+            },
+            {
+                path: "/home/properties/:id",
+                element: <ViewProperty></ViewProperty>
+            },
+            {
+                path: "/home/myproperties",
+                element: <MyProperties></MyProperties>
+            },
+            {
+                path: "/home/favourites",
+                element: <MyProperties></MyProperties>
             },
 
         ]

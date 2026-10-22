@@ -14,7 +14,7 @@
     --ps-muted: #8290a3;
     --ps-border: #e7ecf2;
     --ps-gold: #d9a441;
-    --ps-sidebar-width: 260px;
+    --ps-sidebar-width: 245px;
 }
 
 /* ================================
@@ -46,7 +46,7 @@
     flex-direction: column;
     width: var(--ps-sidebar-width);
     height: 100vh;
-    padding: 28px 18px 20px;
+    padding: 22px 16px 16px;
     overflow-y: auto;
     background: var(--ps-navy);
     color: var(--ps-white);
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 0 8px 30px;
+    padding: 0 8px 22px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -94,22 +94,19 @@
     letter-spacing: 0.4px;
 }
 
-/* Section headings */
+/* Section Headings */
 
 .sidebar-section-title {
-    margin: 27px 10px 12px;
+    margin: 20px 10px 9px;
     color: #91a6c0;
     font-size: 10px;
     font-weight: 750;
     letter-spacing: 1.5px;
 }
 
-.seller-menu-title {
-    margin-top: 29px;
-}
-
+.seller-menu-title,
 .account-menu-title {
-    margin-top: 29px;
+    margin-top: 22px;
 }
 
 /* Navigation */
@@ -117,7 +114,7 @@
 .sidebar-nav {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 4px;
 }
 
 .sidebar-link {
@@ -125,16 +122,14 @@
     display: flex;
     align-items: center;
     gap: 13px;
-    min-height: 46px;
-    padding: 12px 14px;
-    border-radius: 10px;
+    min-height: 42px;
+    padding: 10px 14px;
+    border-radius: 9px;
     color: #c2cede;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
+    transition: background 0.2s ease, color 0.2s ease,
         transform 0.2s ease;
 }
 
@@ -167,7 +162,7 @@
 
 .sidebar-logout {
     margin-top: auto;
-    padding-top: 30px;
+    padding-top: 22px;
 }
 
 .navbar-logout-button {
@@ -176,19 +171,17 @@
     justify-content: flex-start;
     gap: 12px;
     width: 100%;
-    min-height: 45px;
-    padding: 12px 14px;
+    min-height: 43px;
+    padding: 11px 14px;
     border: 1px solid rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
+    border-radius: 9px;
     background: transparent;
     color: #d1dbea;
     font-family: inherit;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
+    transition: background 0.2s ease, border-color 0.2s ease,
         color 0.2s ease;
 }
 
@@ -202,14 +195,14 @@
     font-size: 19px;
 }
 
-/* Sidebar footer */
+/* Sidebar Footer */
 
 .sidebar-footer {
     display: flex;
     align-items: center;
     gap: 9px;
-    margin-top: 18px;
-    padding: 18px 8px 0;
+    margin-top: 16px;
+    padding: 14px 8px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #91a6c0;
     font-size: 10px;
@@ -237,13 +230,15 @@
     margin-left: var(--ps-sidebar-width);
 }
 
+/* Header */
+
 .main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    min-height: 116px;
-    padding: 26px 38px;
+    min-height: 105px;
+    padding: 22px 28px;
     border-bottom: 1px solid var(--ps-border);
     background: var(--ps-white);
 }
@@ -257,7 +252,7 @@
 }
 
 .main-header p {
-    margin: 8px 0 0;
+    margin: 7px 0 0;
     color: var(--ps-muted);
     font-size: 13px;
     line-height: 1.6;
@@ -284,13 +279,13 @@
     background: var(--ps-teal);
 }
 
-/* Outlet content */
+/* Outlet Content */
 
 .page-content {
     flex: 1;
     width: 100%;
     min-width: 0;
-    padding: 30px 38px 40px;
+    padding: 24px 25px 35px;
 }
 
 /* ================================
@@ -299,32 +294,32 @@
 
 @media (min-width: 1500px) {
     .page-content {
-        padding: 36px 48px 48px;
+        padding: 30px 35px 40px;
     }
 
     .main-header {
-        padding-right: 48px;
-        padding-left: 48px;
+        padding-right: 35px;
+        padding-left: 35px;
     }
 }
 
 @media (max-width: 1100px) {
     :root {
-        --ps-sidebar-width: 230px;
+        --ps-sidebar-width: 220px;
     }
 
     .sidebar {
-        padding-right: 14px;
-        padding-left: 14px;
+        padding-right: 12px;
+        padding-left: 12px;
     }
 
     .main-header {
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 22px;
+        padding-left: 22px;
     }
 
     .page-content {
-        padding: 25px;
+        padding: 20px;
     }
 
     .header-badge {
@@ -365,12 +360,12 @@
     }
 
     .sidebar-section-title {
-        margin: 17px 7px 9px;
+        margin: 15px 7px 8px;
     }
 
     .seller-menu-title,
     .account-menu-title {
-        margin-top: 18px;
+        margin-top: 16px;
     }
 
     .sidebar-nav {
@@ -381,8 +376,8 @@
 
     .sidebar-link {
         gap: 8px;
-        min-height: 42px;
-        padding: 10px;
+        min-height: 40px;
+        padding: 9px;
         font-size: 12px;
     }
 
@@ -392,7 +387,7 @@
     }
 
     .sidebar-logout {
-        margin-top: 16px;
+        margin-top: 14px;
         padding-top: 0;
     }
 
@@ -402,8 +397,8 @@
     }
 
     .sidebar-footer {
-        margin-top: 13px;
-        padding-top: 12px;
+        margin-top: 12px;
+        padding-top: 11px;
     }
 
     .propsphere-main {
@@ -413,7 +408,7 @@
 
     .main-header {
         min-height: auto;
-        padding: 23px 20px;
+        padding: 20px;
     }
 
     .main-header h1 {
@@ -425,7 +420,7 @@
     }
 
     .page-content {
-        padding: 20px;
+        padding: 18px;
     }
 }
 
@@ -441,7 +436,7 @@
     }
 
     .main-header {
-        padding: 20px 15px;
+        padding: 18px 15px;
     }
 
     .main-header h1 {

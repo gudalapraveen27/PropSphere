@@ -1,167 +1,118 @@
 
-/* ===== PropSphere Properties Page ===== */
-
 .properties-page {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    color: #263449;
-    font-family: "Inter", "Segoe UI", sans-serif;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #f5f7fa;
+    color: #142b4a;
 }
 
-/* ===== Heading ===== */
+.properties-page * {
+    box-sizing: border-box;
+}
 
 .properties-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 28px;
+    gap: 16px;
+    margin-bottom: 22px;
 }
 
 .properties-eyebrow {
-    color: #0F9D8A;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    color: #0f9d8a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
 }
 
 .properties-heading h2 {
-    margin: 9px 0;
-    color: #142B4A;
-    font-size: 30px;
-    font-weight: 750;
-    letter-spacing: -0.7px;
+    margin: 7px 0;
+    font-size: 27px;
 }
 
 .properties-heading p {
     margin: 0;
-    color: #718096;
-    font-size: 14px;
-    line-height: 1.7;
+    color: #687386;
 }
 
 .properties-count {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
-    flex-shrink: 0;
-    padding: 13px 19px;
-    border: 1px solid #D8EEE9;
-    border-radius: 12px;
-    background: #FFFFFF;
+    padding: 12px 18px;
+    background: white;
+    border-radius: 9px;
+    white-space: nowrap;
 }
 
 .properties-count strong {
-    color: #0F8C7C;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .properties-count span {
-    color: #718096;
-    font-size: 11px;
+    color: #687386;
+    font-size: 12px;
 }
 
-/* ===== Search and filters ===== */
-
 .properties-toolbar {
-    display: grid;
-    grid-template-columns: minmax(200px, 1fr) 210px 170px;
-    gap: 13px;
-    margin-bottom: 28px;
-    padding: 16px;
-    border: 1px solid #E5EBF2;
-    border-radius: 13px;
-    background: #FFFFFF;
-    box-shadow: 0 5px 20px rgba(20, 43, 74, 0.035);
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.property-search,
+.property-filter {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dce3eb;
+    border-radius: 7px;
+    background: white;
+    color: #142b4a;
+    font-size: 14px;
+    outline-color: #0f9d8a;
 }
 
 .property-search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-    padding: 0 13px;
-    border: 1px solid #D8E1EA;
-    border-radius: 8px;
-}
-
-.property-search-icon {
-    color: #0F9D8A;
-    font-size: 24px;
-}
-
-.property-search input {
-    width: 100%;
-    min-width: 0;
-    padding: 12px 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: #263449;
-    font-family: inherit;
-    font-size: 13px;
-}
-
-.property-search:focus-within {
-    border-color: #0F9D8A;
-    box-shadow: 0 0 0 3px rgba(15, 157, 138, 0.1);
+    flex: 1;
 }
 
 .property-filter {
-    width: 100%;
-    min-width: 0;
-    padding: 12px;
-    border: 1px solid #D8E1EA;
-    border-radius: 8px;
-    outline: none;
-    background: #FFFFFF;
-    color: #34465B;
-    font-family: inherit;
-    font-size: 12px;
-    cursor: pointer;
+    width: 180px;
 }
 
-.property-filter:focus {
-    border-color: #0F9D8A;
-}
-
-/* ===== Property grid ===== */
-
+/* Three property cards in each desktop row */
 .property-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 23px;
-    align-items: stretch;
+    gap: 20px;
+    width: 100%;
 }
-
-/* ===== Property card ===== */
 
 .property-card {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid #E3EAF1;
-    border-radius: 14px;
-    background: #FFFFFF;
-    box-shadow: 0 5px 22px rgba(20, 43, 74, 0.045);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(20, 43, 74, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .property-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.11);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(20, 43, 74, 0.12);
 }
-
-/* ===== Property image ===== */
 
 .property-card-image {
     position: relative;
-    height: 205px;
-    overflow: hidden;
-    background: #E8EDF3;
+    height: 190px;
+    flex-shrink: 0;
+    background: #e8edf3;
 }
 
 .property-card-image img {
@@ -169,11 +120,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.property-card:hover .property-card-image img {
-    transform: scale(1.04);
 }
 
 .property-image-placeholder {
@@ -181,295 +127,198 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #E5F2F0, #E8EDF3);
-    color: #718096;
+    color: #8291a5;
 }
 
 .property-image-placeholder span {
-    color: #0F9D8A;
     font-size: 42px;
 }
 
 .property-image-placeholder p {
-    margin: 7px 0 0;
-    font-size: 12px;
+    margin: 7px 0;
+    font-size: 13px;
+}
+
+.property-favourite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #687386;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 7px #0002;
+}
+
+.property-favourite-button.favourited {
+    color: #e63946;
 }
 
 .property-listing-badge,
 .property-type-badge {
     position: absolute;
-    top: 13px;
-    padding: 7px 10px;
-    border-radius: 6px;
-    font-size: 10px;
-    font-weight: 750;
+    left: 12px;
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .property-listing-badge {
-    left: 13px;
-    background: #0F9D8A;
-    color: #FFFFFF;
+    top: 12px;
+    color: white;
 }
 
-.property-listing-badge.rent-badge {
-    background: #142B4A;
+.sale-badge {
+    background: #0f9d8a;
+}
+
+.rent-badge {
+    background: #142b4a;
 }
 
 .property-type-badge {
-    right: 13px;
-    max-width: 60%;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.95);
-    color: #142B4A;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    top: 43px;
+    background: white;
+    color: #142b4a;
 }
-
-/* ===== Card content ===== */
 
 .property-card-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    height: calc(100% - 205px);
-    padding: 19px;
+    padding: 16px;
 }
 
 .property-card-location {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin: 0 0 10px;
-    color: #718096;
-    font-size: 11px;
-}
-
-.property-card-location span {
-    color: #0F9D8A;
-    font-size: 17px;
+    margin: 0 0 9px;
+    color: #0f9d8a;
+    font-size: 12px;
 }
 
 .property-card-title {
-    margin: 0 0 9px;
-    color: #142B4A;
+    margin: 0 0 10px;
     font-size: 17px;
-    font-weight: 750;
     line-height: 1.45;
     overflow-wrap: anywhere;
 }
 
 .property-card-description {
     display: -webkit-box;
-    min-height: 40px;
-    margin: 0 0 16px;
     overflow: hidden;
-    color: #718096;
-    font-size: 12px;
-    line-height: 1.7;
+    margin: 0 0 14px;
+    color: #687386;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
-/* ===== Property features ===== */
 
 .property-features {
     display: flex;
     flex-wrap: wrap;
-    gap: 9px 15px;
-    margin-bottom: 17px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #EDF0F5;
-}
-
-.property-features span {
-    color: #718096;
-    font-size: 11px;
+    gap: 12px;
+    margin-top: auto;
+    padding: 13px 0;
+    border-top: 1px solid #edf0f4;
+    color: #687386;
+    font-size: 12px;
 }
 
 .property-features strong {
-    color: #34465B;
-    font-weight: 750;
+    color: #142b4a;
+    font-size: 15px;
 }
-
-/* ===== Price and details button ===== */
 
 .property-card-footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: auto;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f4;
 }
 
 .property-price {
-    min-width: 0;
-}
-
-.property-price strong {
-    color: #142B4A;
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 17px;
     overflow-wrap: anywhere;
 }
 
-.property-details-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    gap: 7px;
-    padding: 10px 12px;
-    border: 1px solid #0F9D8A;
-    border-radius: 7px;
-    background: #0F9D8A;
-    color: #FFFFFF;
-    font-family: inherit;
-    font-size: 11px;
-    font-weight: 700;
+.property-details-button,
+.property-reset-button {
+    padding: 11px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #142b4a;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s ease;
 }
 
-.property-details-button:hover {
-    background: #0B8173;
+.property-details-button:hover,
+.property-reset-button:hover {
+    background: #0f9d8a;
 }
 
-.property-details-button span {
-    font-size: 15px;
-}
-
-/* ===== Loading and error states ===== */
-
+.properties-empty,
 .property-status {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 280px;
-    color: #718096;
+    padding: 45px 20px;
     text-align: center;
-}
-
-.property-status h3 {
-    color: #142B4A;
-}
-
-.property-error h3 {
-    color: #A12D2D;
-}
-
-.property-loader {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 15px;
-    border: 4px solid #DDEBE8;
-    border-top-color: #0F9D8A;
-    border-radius: 50%;
-    animation: property-spin 0.8s linear infinite;
-}
-
-@keyframes property-spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ===== Empty state ===== */
-
-.properties-empty {
-    padding: 65px 20px;
-    border: 1px dashed #CCD7E2;
-    border-radius: 14px;
-    background: #FFFFFF;
-    text-align: center;
-}
-
-.properties-empty-icon {
-    color: #0F9D8A;
-    font-size: 44px;
+    color: #687386;
 }
 
 .properties-empty h3 {
-    margin: 12px 0 8px;
-    color: #142B4A;
-    font-size: 20px;
+    color: #142b4a;
 }
 
-.properties-empty p {
-    color: #718096;
-    font-size: 13px;
-}
-
-.property-reset-button {
-    margin-top: 12px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 7px;
-    background: #142B4A;
-    color: #FFFFFF;
-    font-weight: 650;
-    cursor: pointer;
-}
-
-/* ===== Responsive layout ===== */
-
+/* Responsive card layout */
 @media (max-width: 1100px) {
     .property-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    .properties-toolbar {
-        grid-template-columns: minmax(0, 1fr) 1fr;
-    }
-
-    .property-search {
-        grid-column: 1 / -1;
-    }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+    .properties-page {
+        padding: 16px;
+    }
+
     .properties-heading {
         align-items: flex-start;
-        flex-direction: column;
     }
 
     .properties-heading h2 {
-        font-size: 25px;
-    }
-
-    .properties-count {
-        flex-direction: row;
-        gap: 9px;
-        padding: 10px 13px;
+        font-size: 23px;
     }
 
     .properties-toolbar {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 12px;
+        flex-direction: column;
     }
 
-    .property-search {
-        grid-column: auto;
-    }
-
-    .property-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 18px;
-    }
-
-    .property-card-image {
-        height: 220px;
+    .property-filter {
+        width: 100%;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .property-card,
-    .property-card-image img,
-    .property-details-button {
-        transition: none;
+@media (max-width: 520px) {
+    .property-grid {
+        grid-template-columns: 1fr;
     }
 
-    .property-loader {
-        animation-duration: 1.8s;
+    .properties-heading {
+        flex-direction: column;
+    }
+
+    .properties-count {
+        align-items: flex-start;
     }
 }
