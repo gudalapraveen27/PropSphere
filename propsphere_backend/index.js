@@ -23,7 +23,7 @@ const allowedOrigins = (process.env.FRONTEND_URL || "http://localhost:5173")
   .map((origin) => origin.trim());
 
 app.use(cors({
-    origin: "https://prop-sphere.vercel.app",
+    origin: "https://propsphere-eight.vercel.app/",
     credentials: true
 }));
 app.use(express.json());
