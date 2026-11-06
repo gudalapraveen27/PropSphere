@@ -1,0 +1,9 @@
+@import "./Auth.css";
+
+.register-container .register-form {
+  border-top: 4px solid #c95e55;
+}
+
+.register-container .register-header h2 {
+  color: #93433c;
+}

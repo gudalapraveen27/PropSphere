@@ -1,0 +1,55 @@
+.dashboard-menu {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-title {
+  margin: 0 0 14px;
+  color: #849189;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.dashboard-links {
+  display: grid;
+  gap: 6px;
+}
+
+.dashboard-link {
+  padding: 11px 13px;
+  border-radius: 10px;
+  color: #53635a;
+  font-weight: 600;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.dashboard-link:hover,
+.dashboard-link.active {
+  background: #eaf5ef;
+  color: var(--green);
+}
+
+@media (max-width: 760px) {
+  .dashboard-menu {
+    padding: 14px;
+  }
+
+  .dashboard-title {
+    margin-bottom: 8px;
+  }
+
+  .dashboard-links {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .dashboard-link {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}

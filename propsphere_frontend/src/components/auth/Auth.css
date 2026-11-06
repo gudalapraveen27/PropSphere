@@ -1,0 +1,110 @@
+.login-container,
+.register-container {
+  display: grid;
+  min-height: calc(100vh - 72px);
+  place-items: center;
+  padding: 36px 18px;
+  background: radial-gradient(ellipse at 15% 15%, #e4f2e9, transparent 45%), #f5f7f4;
+}
+
+.register-container {
+  background: radial-gradient(ellipse at 85% 15%, #e4f2e9, transparent 45%), #f5f7f4;
+}
+
+.login-form,
+.register-form {
+  width: min(100%, 460px);
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.register-form {
+  padding: 32px 38px;
+}
+
+.login-header,
+.register-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-header h2,
+.register-header h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.register-header h2 {
+  font-size: 29px;
+}
+
+.login-header p,
+.register-header p {
+  margin: 0;
+}
+
+.login-field,
+.register-field {
+  display: grid;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.login-field label,
+.register-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-field input,
+.register-field input,
+.register-field select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcfb;
+}
+
+.login-field input:focus,
+.register-field input:focus,
+.register-field select:focus {
+  border-color: #60a88b;
+  outline: 0;
+  box-shadow: 0 0 0 3px #e3f2ea;
+}
+
+.login-footer,
+.register-footer {
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.login-footer span,
+.register-footer span {
+  color: var(--green);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.login-error,
+.register-error {
+  margin: 14px 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fff0ed;
+  color: #a54236;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+  .login-form,
+  .register-form {
+    padding: 26px 20px;
+  }
+}

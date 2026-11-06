@@ -1,0 +1,9 @@
+@import "./Auth.css";
+
+.login-container .login-form {
+  border-top: 4px solid #c95e55;
+}
+
+.login-container .login-header h2 {
+  color: #93433c;
+}

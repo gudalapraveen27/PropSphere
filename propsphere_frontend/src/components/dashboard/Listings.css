@@ -1,0 +1,241 @@
+.listings-page {
+  padding: 8px 0
+}
+.listings-header,.property-listings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px
+}
+.listings-heading {
+  font-size: 27px;
+  margin: 0
+}
+.listings-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: var(--green);
+  font-weight: 800
+}
+.property-form {
+  margin: 22px 0;
+  padding: 24px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow)
+}
+.form-section {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line)
+}
+.form-section h4 {
+  margin: 0 0 14px
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 14px
+}
+.form-field {
+  display: grid;
+  gap: 7px
+}
+.form-field-full {
+  grid-column: 1/-1
+}
+.form-field label {
+  font-size: 13px;
+  font-weight: 700
+}
+.form-control {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fcfdfc
+}
+.form-textarea {
+  min-height: 105px;
+  resize: vertical
+}
+.section-description {
+  font-size: 13px
+}
+.amenities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+.amenity-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: #f4f7f5;
+  border-radius: 9px
+}
+.form-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 18px
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-weight: 700
+}
+.btn-primary {
+  border: 0;
+  background: var(--green);
+  color: #fff
+}
+.btn-secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #47574e
+}
+.btn-delete {
+  border: 0;
+  background: #fff0ee;
+  color: #b34e45
+}
+.selected-images-grid,.property-cards {
+  display: grid;
+  gap: 12px
+}
+.selected-images-grid {
+  grid-template-columns: repeat(auto-fill,minmax(130px,1fr))
+}
+.selected-image-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px
+}
+.selected-image-card img {
+  width: 100%;
+  height: 105px;
+  object-fit: cover
+}
+.selected-image-info {
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+  font-size: 12px
+}
+.selected-image-info .btn {
+  padding: 7px
+}
+.property-count {
+  color: var(--muted);
+  font-size: 13px
+}
+.listing-property-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px
+}
+.property-card-info p {
+  margin: 3px 0
+}
+.property-card-title {
+  font-weight: 700;
+  color: var(--ink)
+}
+.property-card-location {
+  font-size: 13px
+}
+.property-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.property-listings {
+  margin-top: 28px
+}
+.property-listings-header h3 {
+  margin: 0 0 14px
+}
+.empty-listings {
+  max-width: 560px;
+  margin: 70px auto;
+  text-align: center;
+  padding: 32px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 17px
+}
+.empty-listings-icon {
+  font-size: 35px
+}
+.listings-error {
+  color: #a54236
+}
+@media (max-width:620px) {
+  .form-grid {
+    grid-template-columns: 1fr
+  }
+  .listing-property-card {
+    align-items: flex-start;
+    gap: 10px
+  }
+  .property-card-actions {
+    flex-direction: column;
+    align-items: flex-end
+  }
+  .property-form {
+    padding: 16px
+  }
+}
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.form-header h3 {
+  margin: 5px 0;
+}
+.selected-images-section {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f7faf8;
+}
+.selected-images-section h4 {
+  margin: 0 0 12px;
+}
+.location-icon {
+  margin-right: 5px;
+  color: var(--green);
+}
+.property-status.status-pending {
+  background: #fff4dc;
+  color: #8c641c;
+}
+.property-status.status-sold {
+  background: #fce9e7;
+  color: #a54236;
+}
+.property-status.status-rented {
+  background: #eee8f7;
+  color: #694d8b;
+}
+.property-form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed #b9c9bf;
+  border-radius: 9px;
+  background: #f7faf8;
+}
+.listings-error {
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fff0ed;
+}

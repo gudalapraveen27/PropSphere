@@ -1,0 +1,43 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line)
+}
+.navbar-container {
+  max-width: 1440px;
+  height: 72px;
+  margin: auto;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.navbar-brand {
+  font: 800 23px Manrope,sans-serif;
+  letter-spacing: -1.2px;
+  color: var(--green)
+}
+.navbar-actions,.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 12px
+}
+.navbar-login,.navbar-register,.navbar-logout {
+  padding: 10px 17px;
+  border-radius: 9px;
+  font-weight: 700
+}
+.navbar-login {
+  color: var(--ink)
+}
+.navbar-register,.navbar-logout {
+  border: 0;
+  background: var(--green);
+  color: white
+}
+.navbar-register:hover,.navbar-logout:hover {
+  background: var(--green-dark)
+}

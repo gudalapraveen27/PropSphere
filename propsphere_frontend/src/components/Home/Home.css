@@ -1,0 +1,31 @@
+.homepage-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 5vw;
+}
+
+.homepage-sidebar {
+  position: sticky;
+  top: 96px;
+}
+
+.homepage-content {
+  min-width: 0;
+  min-height: 75vh;
+}
+
+@media (max-width: 760px) {
+  .homepage-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px 4vw;
+  }
+
+  .homepage-sidebar {
+    position: static;
+  }
+}
