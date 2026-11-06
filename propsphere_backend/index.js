@@ -21,7 +21,11 @@ const app = express();
 const allowedOrigins = (process.env.FRONTEND_URL || "http://localhost:5173")
   .split(",")
   .map((origin) => origin.trim());
-app.use(cors({ origin: allowedOrigins }));
+
+app.use(cors({
+    origin: "https://prop-sphere.vercel.app",
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
